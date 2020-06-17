@@ -4,7 +4,7 @@ jobs:
    docker:
       - image: ubuntu:18.04
    environment:
-      GIT_EMAIL: 'meshekharbehera613@@gmail.com'
+      GIT_EMAIL: 'meshekharbehera613@gmail.com'
       GIT_NAME: 'Flamefusion'
       VERSION: '2.3'
       SHRP_MANIFEST: 'android-9.0'
@@ -43,4 +43,4 @@ workflows:
   cooking:
     jobs:
       - build:
-          context: Flamefusion
+          context: raza

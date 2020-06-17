@@ -134,7 +134,7 @@ SHRP_OTG := /usb_otg
 SHRP_DEVICE_CODE := begonia
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_REC_TYPE := SAR
-SHRP_DEVICE_TYPE := AB
+SHRP_DEVICE_TYPE := A/B
 SHRP_EXPRESS := true
 SHRP_DARK := true
 

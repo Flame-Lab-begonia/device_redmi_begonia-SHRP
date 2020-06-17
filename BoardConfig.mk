@@ -16,7 +16,7 @@
 
 TARGET_OTA_ASSERT_DEVICE := begonia,begoniain
 
-DEVICE_PATH := device/redmi/begonia
+SHRP_PATH := device/redmi/begonia
 
 # Architecture
 TARGET_ARCH := arm64
@@ -55,12 +55,12 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 1
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(SHRP_PATH)/prebuilt/Image.gz-dtb
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
+BOARD_PREBUILT_DTBOIMAGE := $(SHRP_PATH)/prebuilt/recovery_dtbo
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := begonia
@@ -125,6 +125,18 @@ TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_SCREEN_BLANK_ON_BOOT := true
+
+SHRP_MAINTAINER := Flamefusion
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_DEVICE_CODE := begonia
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := AB
+SHRP_EXPRESS := true
+SHRP_DARK := true
 
 PLATFORM_SECURITY_PATCH := 2019-10-05
 VENDOR_SECURITY_PATCH := 2019-06-05
